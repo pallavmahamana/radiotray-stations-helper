@@ -9,4 +9,5 @@ copy the bookmark.xml file to ~/.local/share/radiotray , and enjoy 1000+ radio s
 
 ### usage
 $ python radiotray_stations_helper.py
+
 $ sudo cp bookmark.xml ~/.local/share/radiotray/
