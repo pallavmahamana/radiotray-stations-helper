@@ -12,16 +12,18 @@ $ pyradio -scd
  and then copy stations.csv file to that location
 
 
-### usage
-# use python2 to run this script
+## usage
+### use python2 to run this script
+```bash
 $ python2 radiotray_stations_helper.py
 
 $ sudo cp bookmark.xml ~/.local/share/radiotray/
+```
 
-or 
+*or*
 
-for pyradio
+for pyradio, copy stations.csv file to location given by following command 
 
-copy stations.csv file to location given by following command 
-
+```bash
 $ pyradio -scd | awk -F: '{print $NF}'
+```
