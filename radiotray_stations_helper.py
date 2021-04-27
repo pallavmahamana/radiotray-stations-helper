@@ -1,3 +1,4 @@
+#!/usr/bin/env python2.7
 import io,re
 import requests,zipfile
 import xml.etree.ElementTree as ET
