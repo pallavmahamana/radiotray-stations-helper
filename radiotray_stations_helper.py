@@ -1,5 +1,5 @@
 #!/usr/bin/env python2.7
-import io,re
+import io,re,csv
 import requests,zipfile
 import xml.etree.ElementTree as ET
 
@@ -43,3 +43,15 @@ tree = ET.ElementTree(bookmarks)
 stationsxml = open("bookmarks.xml","w")
 tree.write(stationsxml)
 stationsxml.close()
+
+
+# write csv file stationname,stationurl for pyradio stations.csv
+
+with open('stations.csv',mode='w') as stationscsvfile:
+	stationfile_writer = csv.writer(stationscsvfile,delimiter=',',quotechar='"',quoting=csv.QUOTE_MINIMAL)
+	for genre in genres:
+		for s in genstations[genre]:
+			stationfile_writer.writerow([s[0],s[1]])
+
+
+
