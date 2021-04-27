@@ -5,6 +5,7 @@ This Python2.7 script downloads the radio station compilation from [radiosure.co
 
 copy the bookmark.xml file to ~/.local/share/radiotray , and enjoy 1000+ radio stations :)
 
+
 for pyradio, check for stations.csv location by below command
 
 $ pyradio -scd
