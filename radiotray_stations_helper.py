@@ -40,6 +40,9 @@ for genre in genres:
 		bookmark.set("url",s[1].decode('UTF-8','ignore').encode('ascii','ignore'))
 
 tree = ET.ElementTree(bookmarks)
+
+# write xml file for radiotray bookmarks.xml
+
 stationsxml = open("bookmarks.xml","w")
 tree.write(stationsxml)
 stationsxml.close()
