@@ -20,8 +20,9 @@ genstations = {}
 for i in stations:
 	genstations[i[2]] = []
 
+
 for station in stations:
-	links = [r for r in station[6:11] if r.find('http://')>-1]
+	links = [r for r in station[5:11] if r.find('http://')>-1]
 	for i,link in enumerate(links):
 		genstations[station[2]].append([station[0]+" ["+str(i)+"]",link])
 
