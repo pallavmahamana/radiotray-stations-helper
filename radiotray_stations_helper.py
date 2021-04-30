@@ -3,19 +3,10 @@ import io,re,csv
 import requests,zipfile
 import xml.etree.ElementTree as ET
 
-
+# download stations zip file from radiosure, unzip it and load it in stations
 url = "http://www.radiosure.com/rsdbms/stations2.zip"
 response = requests.get(url)
-
 file = zipfile.ZipFile(io.BytesIO(response.content))
-# stationsfile = file.read(file.namelist()[0],'r')
-# stationsfile = file.readlines(file.namelist()[0])
-
-# stations  = re.split("(\\t-)*(\\n)",stationsfile)
-# stations = [i for i in stations if i is not None]
-# stations = [i.split("\t") for i in stations if len(i)>2]
-# 
-
 file.extract(file.namelist()[0])
 
 with open(file.namelist()[0],'r') as file:
@@ -47,7 +38,10 @@ for genre in genres:
 		bookmark.set("url",s[1].decode('utf-8'))
 
 tree = ET.ElementTree(bookmarks)
-stationsxml = open("bookmarks.xml","wb")
+
+# write xml file for radiotray bookmarks.xml
+
+stationsxml = open("bookmarks.xml","w")
 tree.write(stationsxml)
 stationsxml.close()
 
