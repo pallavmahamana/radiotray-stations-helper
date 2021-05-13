@@ -3,7 +3,7 @@ Script to generate bookmarks.xml from radiosure.com radio stations database for 
 
 This Python2.7 script downloads the radio station compilation from [radiosure.com](http://www.radiosure.com/stations/) , and writes it to [radiotray](http://radiotray.sourceforge.net/) bookmark.xml format ( and [pyradio](https://github.com/coderholic/pyradio) stations.csv file )
 
-copy the bookmark.xml file to ~/.local/share/radiotray , and enjoy ~4000+ radio stations :)
+copy the bookmark.xml file to ~/.local/share/radiotray , and enjoy ~50000+ radio stations :)
 
 
 for pyradio, check for stations.csv location by below command
